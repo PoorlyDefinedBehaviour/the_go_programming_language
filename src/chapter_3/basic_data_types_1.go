@@ -69,6 +69,33 @@ complex numbers
 	y := 3 + 4i
 
 	are also valid.
+
+strings
+	Strings are immutable sequences of bytes.
+	Text strings are conventionally interpreted as UTF-8 encoded sequences
+	of Unicode code points (runes).
+
+	The built-in len function returns the number of bytes(not runes) in a string and
+	the index operation string[i] retrives the i-th byte of the string.
+
+	The i-th bite of the string is not necessarily the i-th character, because the UTF-8
+	encoding of a non-ASCII code point requires two or more bytes.
+
+	The substring operation s[i:j] yields a new string consisting of the bytes
+	of the original string starting at index a and continuing up to,
+	but not including, the byte at index j. The result contains
+	j - i bytes.
+
+	s := "hello, world"
+	fmt.Println(s[0:5]) // "hello"
+	fmt.Println(s[:5]) // "world"
+	fmt.Println(s[:]) // "hello, world"
+
+	The substring operation is cheap, since strings are immutable their
+	underlying memory can be shared. No new memory is allocated.
+
+	Strings can be concatenated using the + operator.
+	fmt.Println("goodbye" + s[5:]) // "goodbye, world"
 */
 
 func main() {
