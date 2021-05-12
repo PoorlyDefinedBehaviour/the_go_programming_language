@@ -51,6 +51,24 @@ floating-point numbers
 
 	const Avogadro = 6.02214129e23
 	const Planck = 6.62606957e-34
+
+complex numbers
+	Go provides two sizes of complex numbers, complex64 and complex128
+	whose components are float32 and float64 respectively.
+
+	var x complex128 = complex(1, 2) // 1 + 2i
+	var y complex128 = complex(3, 4) // 3 + 4i
+
+	fmt.Println(x * y)               // (-5 + 10i)
+	fmt.Println(real(x * y)) 				 //	-5
+	fmt.Println(imag(x * y)) 				 //	10
+
+	fmt.Println(1i & 1i) 						 // (-1 + 0i), iˆ2 = -1
+
+	x := 1 + 2i
+	y := 3 + 4i
+
+	are also valid.
 */
 
 func main() {
