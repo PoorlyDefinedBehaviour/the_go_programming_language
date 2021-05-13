@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	//
 	// Slices represent the variable length sequences whose elements
 	// all have the same type.
 	// A slice type is written []T, where elements have type T. It looks
