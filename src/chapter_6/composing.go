@@ -19,7 +19,7 @@ type ColoredPoint struct {
 	Color color.RGBA
 }
 
-// A ColoredPointer is not a Point, but it has a Point.
+// A ColoredPoint is not a Point, but it has a Point.
 // The embedded field instructs the compiler to generate
 // additional wrapper methods that delegate to the declared methods,
 // equivalent to these:
