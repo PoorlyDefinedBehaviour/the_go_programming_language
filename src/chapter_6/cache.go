@@ -24,6 +24,9 @@ func (c *Cache) Set(key string, value string) {
 }
 
 func (c *Cache) Has(key string) bool {
+	c.Lock()
+	defer c.Unlock()
+
 	_, ok := c.mappings[key]
 
 	return ok
