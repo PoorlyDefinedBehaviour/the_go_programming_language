@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"time"
 )
 
 /*
@@ -72,4 +73,19 @@ func main() {
 	// type -> nil
 	// value -> nil
 	writer = nil
+
+	// interface values can hold any value
+	var x interface{} = time.Now()
+
+	x = []int{1, 2, 3}
+
+	// Interface values may be compared
+	// if the value it holds is comparable.
+	// When the value it holds it no comparable, the runtime will panic.
+	// fmt.Println(x == x) // panic because []int is not comparable
+
+	// We can print out the dynamic value of an interface using %T.
+	// Internally, fmt uses reflection to obain the name of the
+	// interface's dynamic type.
+	fmt.Printf("\n%T\n", x) // []int
 }
